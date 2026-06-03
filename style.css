@@ -1,4 +1,4 @@
-/* 기본 리셋 및 폰트 설정 */
+/* 기본 리셋 및 레이아웃 설정 */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,6 @@ body {
     color: #333;
 }
 
-/* 앱 전체 컨테이너 */
 .app-container {
     background-color: #ffffff;
     width: 100%;
@@ -33,7 +32,7 @@ header h1 {
     text-align: center;
 }
 
-/* 주간 뷰 스타일 */
+/* 주간 뷰 가로 나열 레이아웃 */
 .week-container {
     display: flex;
     align-items: center;
@@ -66,7 +65,6 @@ header h1 {
     gap: 4px;
 }
 
-/* 개별 날짜 카드 스타일 */
 .day-card {
     display: flex;
     flex-direction: column;
@@ -105,13 +103,13 @@ header h1 {
     font-weight: bold;
 }
 
-/* [조건] 오늘 날짜 스타일 구분 */
+/* 조건: 오늘 날짜 시각적 구분 스타일 */
 .day-card.is-today {
     border: 1px dashed #672be0;
     background-color: #f3ebff;
 }
 
-/* [조건] 현재 선택된 날짜 스타일 */
+/* 선택된 날짜 강조 스타일 */
 .day-card.is-selected {
     background-color: #672be0;
     color: white;
@@ -128,7 +126,7 @@ header h1 {
     color: white;
 }
 
-/* 입력 영역 스타일 */
+/* 입력창 및 기능 버튼 스타일 */
 .input-container {
     display: flex;
     gap: 10px;
@@ -165,7 +163,6 @@ header h1 {
     background-color: #5522b8;
 }
 
-/* 에러 메시지 스타일 */
 #error-message {
     color: #ff4d4f;
     font-size: 14px;
@@ -208,7 +205,7 @@ header h1 {
     font-weight: bold;
 }
 
-/* 리스트 스타일 */
+/* Todo 아이템 스타일 */
 #todo-list {
     list-style-type: none;
 }
@@ -275,33 +272,9 @@ header h1 {
     opacity: 0.8;
 }
 
-.btn-complete {
-    background-color: #672be0;
-    color: white;
-}
-
-.btn-edit {
-    background-color: #e2e8f0;
-    color: #333;
-}
-
-.btn-edit:disabled {
-    background-color: #eaeaea;
-    color: #aaa;
-    cursor: not-allowed;
-}
-
-.btn-delete {
-    background-color: #ff4d4f;
-    color: white;
-}
-
-.btn-save {
-    background-color: #28a745;
-    color: white;
-}
-
-.btn-cancel {
-    background-color: #6c757d;
-    color: white;
-}
+.btn-complete { background-color: #672be0; color: white; }
+.btn-edit { background-color: #e2e8f0; color: #333; }
+.btn-edit:disabled { background-color: #eaeaea; color: #aaa; cursor: not-allowed; }
+.btn-delete { background-color: #ff4d4f; color: white; }
+.btn-save { background-color: #28a745; color: white; }
+.btn-cancel { background-color: #6c757d; color: white; }
